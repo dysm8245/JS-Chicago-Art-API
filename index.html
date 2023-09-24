@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artwork</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a23117853d.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- background -->
+    <section>
+        <img src="Art-Institute-of-Chicago.webp" class="background" alt="">
+    </section>
+
+    <!-- Navbar -->
+    <div>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <a class="navbar-brand text-light ml-5" href="#">Chicago Art Institute</a>
+        </nav>
+    </div>
+
+    <div class="container mb-5" id="container" style="padding-top: 300px;">
+        <div id="card" class="card text-center p-3 bg-trans">
+            <h1 class="card-title">Artwork</h1>
+            <p id="message" style="color: red; visibility: hidden;">Click on a painting for more info</p>
+        </div>
+    </div>
+    <div id="paintings" class="container">
+        
+    </div>
+    <div id="imgField" class="d-flex justify-content-center">
+        <div>
+            <button class="btn btn-info m-5" id="display" onclick="loadArt()">Display Artwork</button>
+        </div>
+    </div>
+    <div id="info" class="container mb-5" style="visibility: hidden;">
+        <div class="row">
+            <div class="d-flex justify-content-center col-lg-6">
+                <button class="btn btn-info" onclick="prev()">Previous Page</button>
+            </div>
+            <div class="d-flex justify-content-center col-lg-6">
+                <button class="btn btn-info" onclick="next()">Next Page</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
