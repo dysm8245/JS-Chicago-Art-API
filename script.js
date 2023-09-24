@@ -32,11 +32,12 @@ async function artInfo(id, page){
     let image_id = info.data[id].image_id
     let artist = info.data[id].artist_display
     let title = info.data[id].title
+    let medium = info.data[id].medium_display
     let description = info.data[id].description
     if(description == null){
         description = "No description"
     }
-    let html = "<div class='card m-1'><h5>Artist: " + artist + "</h5><h5>Title: " + title + "</h5><span><h5>Description: </h5>" + description + "</span></div>"
+    let html = "<div class='card m-1'><h5>Artist: " + artist + "</h5><h5>Title: " + title + "</h5><h5>Medium: " + medium + "</h5><span><h5>Description: </h5>" + description + "</span></div>"
     document.getElementById("paintings").innerHTML = "<div class='row'><div class='d-flex justify-content-center col-lg-6'><img class='m-1 soloImg' src='https://www.artic.edu/iiif/2/" + image_id + "/full/843,/0/default.jpg' alt=''></div><div class='col-lg-6'>" + html + "</div></div>"
     document.getElementById("display").style.visibility = "visible"
     document.getElementById("display").innerHTML = "Go Back"
